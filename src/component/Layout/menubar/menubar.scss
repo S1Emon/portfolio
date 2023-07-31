@@ -1,0 +1,34 @@
+nav {
+  a {
+    color: $black_color;
+    font-size: 18px;
+    transition: all linear 0.3s;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: $main_color;
+      transition: all linear 0.3s;
+    }
+    &:hover {
+      color: $main_color;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  button {
+    background-color: $main_color;
+    outline: none;
+    border: none;
+    padding: 15px 30px;
+    color: $white-color;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+}

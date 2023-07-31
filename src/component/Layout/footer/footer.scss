@@ -1,0 +1,107 @@
+.footer {
+  background-color: #eeebf2;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .footer-content {
+    p {
+      font-weight: 400;
+      color: #717171;
+      line-height: 30px;
+      font-size: 18px;
+      margin-top: 45px;
+    }
+  }
+  .footer-content-List {
+    h4 {
+      color: $footer-header-color;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 26px;
+      margin-bottom: 52px;
+    }
+    a {
+      display: block;
+      color: $footer-link-color;
+      font-size: 18px;
+      margin-bottom: 15px;
+      transition: all liiner 0.2s;
+      &:hover {
+        color: $main_color;
+      }
+    }
+  }
+  .footer-content-subscribe {
+    h4 {
+      color: $footer-header-color;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 26px;
+      margin-bottom: 52px;
+    }
+    p {
+      font-weight: 400;
+      color: $footer-link-color;
+      line-height: 30px;
+      font-size: 18px;
+      margin-top: 40px;
+    }
+    .newsletter-form {
+      background-color: $white-color;
+      border-radius: 8px;
+      input {
+        border: none;
+        outline: none;
+        padding: 15px 20px;
+        background-color: transparent;
+      }
+      button {
+        border: none;
+        padding: 15px 18px;
+        background-color: $main_color;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: $white-color;
+        }
+      }
+    }
+    .social-links {
+      .icons-shape {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f3f3f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        svg {
+          filter: grayscale(1);
+          transition: all linear 0.3s;
+        }
+        &:hover {
+          svg {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright-part {
+  padding: 20px 0;
+  background-color: $main_color;
+  .copyright_Lists {
+    ul {
+      li {
+        a {
+          color: $white-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
