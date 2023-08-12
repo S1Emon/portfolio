@@ -2,8 +2,7 @@
 import React from "react";
 import { DM_Sans } from "next/font/google";
 import { motion } from "framer-motion";
-import Experience from "./Experience";
-import Achievement from "./Achievement";
+import AboutBottom from "./AboutBottom";
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
@@ -68,18 +67,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="row align-items-center">
-          <div className="col-lg-7">
-            <div className="about-experience">
-              <Experience />
-            </div>
-          </div>
-          <div className="col-lg-5">
-            <div className="about-achievement">
-              <Achievement />
-            </div>
-          </div>
-        </div>
+        <AboutBottom />
       </div>
     </motion.div>
   );

@@ -41,31 +41,35 @@
       margin-top: 23px;
     }
   }
-  .about-experience {
-    margin-top: 78px;
-    .experience-content-card {
-      padding: 22px;
-      background-color: $white-color;
-      margin-top: 25px;
-      color: $black_color;
-      // border: 1px solid $footer-link-color;
+
+  .about-item {
+    .about-box {
+      width: 100%;
       border-radius: 8px;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      cursor: pointer;
+      border: 1px solid $white-second;
+      padding: 22px 18px;
+      min-height: 200px;
       transition: all linear 0.3s;
-      h3 {
+      cursor: pointer;
+      h4 {
+        font-weight: 700;
         font-size: 20px;
         color: $black_color;
-        font-weight: 700;
+        transition: all linear 0.3s;
+        line-height: 28px;
       }
       p {
+        font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        color: $text-color;
+        color: $black_second;
+        transition: all linear 0.3s;
       }
       &:hover {
         background-color: $main_color;
-        h3 {
+        box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+        border: $main_color;
+        h4 {
           color: $white-color;
         }
         p {
@@ -73,35 +77,34 @@
         }
       }
     }
-  }
-  .about-achievement {
-    .achievement-content {
-      padding-left: 188px;
-      padding-top: 90px;
-      h4 {
-        font-size: 32px;
-        color: $black_color;
-        line-height: 38px;
-      }
-      p {
-        font-size: 18px;
-        color: $footer-link-color;
-        line-height: 30px;
-        margin-top: 24px;
-      }
-      button {
-        outline: none;
-        padding: 15px 30px;
-        border-radius: 8px;
-        border: 1px solid $main_color;
-        background-color: $white-color;
-        margin-top: 15px;
-        color: $main_color;
-        font-size: 20px;
-        transition: all linear 0.3s;
-        &:hover {
-          background-color: $main_color;
-          color: $white-color;
+    .right-inner-about {
+      margin-top: 50px;
+      padding-left: 50px;
+      .showdata {
+        h4 {
+          font-size: 32px;
+          font-weight: 700;
+          color: $black_color;
+          padding-right: 120px;
+          line-height: 40px;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          color: $footer-link-color;
+          line-height: 30px;
+          padding-right: 24px;
+        }
+        button {
+          padding: 15px 29px;
+          outline: none;
+          border: 1px solid $main_color;
+          font-size: 20px;
+          color: $main_color;
+          margin-top: 30px;
+          font-weight: 700;
+          border-radius: 8px;
+          background-color: $white-color;
         }
       }
     }
