@@ -32,7 +32,7 @@
       .hero-buttons {
         margin-top: 40px;
         button {
-          padding: 15px 32px;
+          padding: 18px 32px;
           background-color: $main_color;
           border: none;
           outline: none;
@@ -40,6 +40,7 @@
           color: $white-color;
           border-radius: 8px;
           margin-right: 40px;
+          font-weight: 700;
         }
         a {
           color: $black_color;

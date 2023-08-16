@@ -1,7 +1,7 @@
 function InstagramTwo() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <g clip-path="url(#clip0_1_183)">
+      <g clipPath="url(#clip0_1_183)">
         <path
           d="M9.99999 20C15.5228 20 20 15.5228 20 9.99999C20 4.47715 15.5228 0 9.99999 0C4.47715 0 0 4.47715 0 9.99999C0 15.5228 4.47715 20 9.99999 20Z"
           fill="#444444"

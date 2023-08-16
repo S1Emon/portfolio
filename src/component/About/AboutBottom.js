@@ -11,9 +11,11 @@ const DmSans = DM_Sans({
 
 const AboutBottom = () => {
   const [active, setActive] = useState(0);
+  const [activeBox, setActiveBox] = useState();
 
   const handleActive = (i) => {
     setActive(i);
+    setActiveBox(i);
   };
   return (
     <div className="about-item">
@@ -33,7 +35,9 @@ const AboutBottom = () => {
                 key={i}
                 onClick={() => handleActive(i)}
               >
-                <div className="about-box">
+                <div
+                  className={activeBox == i ? "active-about-box" : "about-box"}
+                >
                   <h4 className={DmSans.className}>{item.heading}</h4>
                   <p className={DmSans.className}>{item.paragraph}</p>
                 </div>

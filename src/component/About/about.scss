@@ -77,6 +77,29 @@
         }
       }
     }
+    .active-about-box {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid $white-second;
+      padding: 22px 18px;
+      min-height: 200px;
+      background-color: $main_color;
+      box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+      border: $main_color;
+      cursor: pointer;
+      h4 {
+        font-weight: 700;
+        font-size: 20px;
+        color: $white-color;
+        line-height: 28px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white-color;
+      }
+    }
     .right-inner-about {
       margin-top: 50px;
       padding-left: 50px;

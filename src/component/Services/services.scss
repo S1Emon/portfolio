@@ -1,0 +1,30 @@
+.service {
+  .service-heading {
+    margin-top: 80px;
+    h4 {
+      font-size: 40px;
+      font-weight: 700;
+      color: $black_color;
+      line-height: 50px;
+      span {
+        color: $main_color;
+      }
+    }
+    p {
+      font-size: 18px;
+      color: $footer-link-color;
+      line-height: 30px;
+    }
+    button {
+      padding: 18px 32px;
+      background-color: $main_color;
+      color: $white-color;
+      outline: none;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+  }
+}
