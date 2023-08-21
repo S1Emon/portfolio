@@ -1,0 +1,115 @@
+.portfolio {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  .portfolio-left {
+    position: relative;
+    .portfolio-image {
+      img {
+        border-top-left-radius: 40%;
+        border-top-right-radius: 40%;
+        object-fit: cover;
+      }
+    }
+    .experience {
+      width: 241px;
+      height: 241px;
+      background-color: $main_color;
+      border: 18px solid $white_color;
+      border-top-right-radius: 100px;
+      position: absolute;
+      bottom: -105px;
+      right: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .experience-text {
+        h4 {
+          color: $white_color;
+          font-size: 42px;
+          font-weight: 700;
+          margin-bottom: 18px;
+        }
+        h5 {
+          color: $white_color;
+          font-size: 42px;
+          font-weight: 700;
+          margin-bottom: 18px;
+        }
+        p {
+          color: $white_color;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .portfolio-right {
+    .portfolio-content {
+      h3 {
+        font-size: 40px;
+        line-height: 50px;
+        color: $black_color;
+        font-weight: 700;
+        span {
+          color: $main_color;
+        }
+      }
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 400;
+        color: $footer_link_color;
+        margin-top: 24px;
+      }
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          color: $footer_link_color;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          svg {
+            margin-right: 8px;
+          }
+        }
+      }
+      button {
+        padding: 15px 29px;
+        outline: none;
+        background-color: transparent;
+        border: 1px solid $main_color;
+        color: $main_color;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 8px;
+        margin-top: 40px;
+      }
+    }
+    .portfolio-statistics {
+      margin-top: 45px;
+      display: flex;
+      .statistics {
+        display: flex;
+        gap: 75px;
+        .statistics-box {
+          text-align: center;
+          h4 {
+            font-size: 48px;
+            font-weight: 400;
+            color: $black_color;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            color: $footer_link_color;
+            margin-top: 11px;
+          }
+        }
+      }
+    }
+  }
+}
