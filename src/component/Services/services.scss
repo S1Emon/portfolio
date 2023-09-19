@@ -1,7 +1,16 @@
 .service {
   margin-top: 120px;
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+  }
   .service-heading {
     margin-top: 100px;
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+    }
     h4 {
       font-size: 40px;
       font-weight: 700;
@@ -10,11 +19,29 @@
       span {
         color: $main_color;
       }
+      @include media-breakpoint-down(md) {
+        font-size: 28px;
+        line-height: 40px;
+      }
+      @include media-breakpoint-down(xl) {
+        font-size: 34px;
+      }
     }
     p {
       font-size: 18px;
       color: $footer-link-color;
       line-height: 30px;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        line-height: 25px;
+        margin-top: 10px;
+        margin-bottom: 8px;
+      }
+      @include media-breakpoint-down(xl) {
+        font-size: 16px;
+        line-height: 25px;
+        padding-right: 50px;
+      }
     }
     button {
       padding: 18px 32px;
@@ -26,70 +53,162 @@
       font-size: 20px;
       font-weight: 700;
       margin-top: 20px;
+      @include media-breakpoint-down(md) {
+        margin-top: 15px;
+        margin-bottom: 35px;
+        padding: 14px 25px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 35px;
+        padding: 14px 25px;
+      }
+      @include media-breakpoint-down(xl) {
+        padding: 14px 25px;
+      }
     }
   }
   .service-right {
     .service-box {
       background-color: $white-color;
-      padding: 24px 80px 10px 24px;
+      padding: 5px 80px 10px 24px;
       border-radius: 8px;
       margin-bottom: 30px;
       box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
       transition: all linear 0.3s;
       cursor: pointer;
+      &:hover {
+        transform: translateX(70px);
+      }
+      @include media-breakpoint-down(md) {
+        &:hover {
+          transform: scale(1.04);
+        }
+        transform: none;
+        padding: 10px;
+      }
+      @include media-breakpoint-down(lg) {
+        &:hover {
+          transform: scale(1.04);
+        }
+        transform: none;
+        padding: 30px;
+        text-align: center;
+      }
+      @include media-breakpoint-down(xl) {
+        padding: 0 30px;
+        &:hover {
+          transform: translateX(40px);
+        }
+      }
       .service-icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $main_color;
         padding: 30px;
       }
-      .service-content {
-        h4 {
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 30px;
-          color: $black_color;
+      .service-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .service-content {
+          padding-left: 10px;
+          @include media-breakpoint-down(md) {
+            text-align: center;
+          }
+          h4 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            color: $black_color;
+            @include media-breakpoint-down(xl) {
+              font-size: 20px;
+              line-height: 25px;
+            }
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $footer-link-color;
+            @include media-breakpoint-down(md) {
+              font-size: 16px;
+            }
+            @include media-breakpoint-down(xl) {
+              font-size: 16px;
+              line-height: 25px;
+            }
+          }
         }
-        p {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 30px;
-          color: $footer-link-color;
-        }
-      }
-      &:hover {
-        transform: translateX(70px);
       }
     }
     .active-service-box {
       background-color: $white-color;
-      padding: 24px 80px 10px 24px;
+      padding: 5px 80px 10px 24px;
       border-radius: 8px;
       margin-bottom: 30px;
       box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
       transform: translateX(70px);
       transition: all linear 0.3s;
       cursor: pointer;
+      @include media-breakpoint-down(md) {
+        transform: scale(1.05);
+        padding: 10px;
+      }
+      @include media-breakpoint-down(lg) {
+        &:hover {
+          transform: scale(1.05);
+        }
+        transform: none;
+        padding: 30px;
+        text-align: center;
+      }
+      @include media-breakpoint-down(xl) {
+        padding: 0 30px;
+        transform: translateX(40px);
+      }
       .service-icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $main_color;
         padding: 30px;
       }
-      .service-content {
-        h4 {
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 30px;
-          color: $black_color;
-        }
-        p {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 30px;
-          color: $footer-link-color;
+      .service-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .service-content {
+          padding-left: 10px;
+          @include media-breakpoint-down(md) {
+            text-align: center;
+          }
+          @include media-breakpoint-down(lg) {
+            text-align: center;
+          }
+          h4 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            color: $black_color;
+            @include media-breakpoint-down(xl) {
+              font-size: 20px;
+              line-height: 25px;
+            }
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $footer-link-color;
+            @include media-breakpoint-down(md) {
+              font-size: 16px;
+            }
+            @include media-breakpoint-down(xl) {
+              font-size: 16px;
+              line-height: 25px;
+            }
+          }
         }
       }
     }

@@ -7,19 +7,19 @@ const ServiceProvideData = [
     title: "Web Development",
     content:
       "There are many variations of passages of Lorem Ipsum available, but the majority.",
-    iconURL: "WD",
+    iconURL: webdev,
   },
   {
     title: "Product Design & Development",
     content:
       "There are many variations of passages of Lorem Ipsum available, but the majority.",
-    iconURL: "PDD",
+    iconURL: design,
   },
   {
     title: "Graphic Design",
     content:
       "There are many variations of passages of Lorem Ipsum available, but the majority.",
-    iconURL: "GD",
+    iconURL: graphics,
   },
 ];
 

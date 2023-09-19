@@ -2,7 +2,7 @@
 import Menudata from "@/data/Menudata/Menudata";
 import Logo from "@/svg/Logo";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -16,8 +16,21 @@ const DmSans = DM_Sans({
 });
 
 const Menubar = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <Navbar expand="lg" className="py-3">
+    <Navbar expand="lg" className={showNavbar ? "nav stickynav" : "nav"}>
       <Container>
         <Link href="#">
           <Logo />
@@ -31,7 +44,7 @@ const Menubar = () => {
           >
             {Menudata?.map((menu, i) => (
               <Link
-                className={DmSans.className + " " + "mx-2"}
+                className={DmSans.className + " " + "mx-3"}
                 href={menu.url}
                 key={i}
               >

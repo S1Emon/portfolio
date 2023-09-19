@@ -5,11 +5,10 @@ import portfolioHero from "../../images/porfolio-hero.png";
 import { DM_Sans, Grechen_Fuemen, Open_Sans } from "next/font/google";
 import PortfolioData from "@/data/PortfolioData/PortfolioData";
 import { AiOutlineCheck } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { animate, motion, useMotionValue } from "framer-motion";
 import StatisticsData from "@/data/PortfolioData/StatisticsData";
 import CountUp from "react-countup";
 import { useState } from "react";
-import ScrollTrigger from "react-scroll-trigger";
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
@@ -27,8 +26,13 @@ const GrechenFuemen = Grechen_Fuemen({
 });
 
 const Portfolio = () => {
-  const [counterOn, setCounterOn] = useState(false);
-
+  const count = useMotionValue(0);
+  useEffect(() => {
+    const animation = animate(count, 150, {
+      duration: 2,
+    });
+    return animation.stop;
+  }, []);
   return (
     <>
       <div className="portfolio">
@@ -88,13 +92,14 @@ const Portfolio = () => {
                       <div className="statistics-box" key={i}>
                         <h4 className={GrechenFuemen.className}>
                           <CountUp
+                            duration={3}
                             start={0}
                             end={item.number}
-                            duration={2}
                             delay={0}
                             scrollSpyOnce={true}
+                            enableScrollSpy={true}
                           />
-                          +
+                          {item.number < 150 ? "+" : ""}
                         </h4>
                         <p className={DmSans.className}>{item.title}</p>
                       </div>

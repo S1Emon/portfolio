@@ -1,23 +1,26 @@
 nav {
-  a {
-    color: $black_color;
-    font-size: 18px;
-    transition: all linear 0.3s;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: 0;
-      background-color: $main_color;
+  padding: 12px 0 !important;
+  :nth-child(3) {
+    a {
+      color: $black_color;
+      font-size: 18px;
       transition: all linear 0.3s;
-    }
-    &:hover {
-      color: $main_color;
+      position: relative;
       &::after {
-        width: 100%;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: $main_color;
+        transition: all linear 0.3s;
+      }
+      &:hover {
+        color: $main_color;
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -30,5 +33,24 @@ nav {
     border-radius: 8px;
     text-transform: capitalize;
     font-size: 16px;
+  }
+  &.stickynav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 80px rgba($color: #000000, $alpha: 0.15);
+    z-index: 999;
+    background-color: $white-color;
+    animation: stickynavs 0.5s;
+  }
+}
+
+@keyframes stickynavs {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 0;
   }
 }

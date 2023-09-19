@@ -82,12 +82,16 @@ const Service = () => {
                 >
                   <div className="row">
                     <div className="col-lg-2">
-                      <div className="service-icon">{item.iconURL}</div>
+                      <div className="service-icon">
+                        <Image src={item.iconURL} alt="Icons" />
+                      </div>
                     </div>
                     <div className="col-lg-10">
-                      <div className="service-content">
-                        <h4 className={DmSans.className}>{item.title}</h4>
-                        <p className={DmSans.className}>{item.content}</p>
+                      <div className="service-content-wrapper">
+                        <div className="service-content">
+                          <h4 className={DmSans.className}>{item.title}</h4>
+                          <p className={DmSans.className}>{item.content}</p>
+                        </div>
                       </div>
                     </div>
                   </div>

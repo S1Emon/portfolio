@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   const Animation = {
     hidden: {
-      y: -15,
+      y: -25,
       opacity: 0,
     },
     visible: {

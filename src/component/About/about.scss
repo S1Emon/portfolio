@@ -1,5 +1,11 @@
 .about {
   padding-bottom: 100px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 0;
+  }
+  @include media-breakpoint-down(xl) {
+    padding-bottom: 0;
+  }
   .about-heading {
     h2 {
       font-size: 48px;
@@ -8,6 +14,16 @@
       line-height: 60px;
       span {
         color: $main_color;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 34px;
+        line-height: 40px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 20px;
+      }
+      @include media-breakpoint-down(xl) {
+        font-size: 47px;
       }
     }
   }
@@ -28,6 +44,42 @@
         height: 70px;
         background-color: $main_color;
       }
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        padding-left: 0;
+        line-height: 25px;
+        &::after {
+          content: none;
+        }
+      }
+      @include media-breakpoint-down(lg) {
+        padding-left: 0;
+        &::after {
+          left: -20px;
+          height: 50px;
+          width: 3px;
+        }
+      }
+      @include media-breakpoint-down(xl) {
+        padding-left: 60px;
+        font-size: 16px;
+        line-height: 25px;
+        &::after {
+          left: 41px;
+          height: 75px;
+          width: 3px;
+        }
+      }
+      @include media-breakpoint-down(xxl) {
+        padding-left: 92px;
+        font-size: 18px;
+
+        &::after {
+          left: 70px;
+          height: 75px;
+          width: 2px;
+        }
+      }
     }
     button {
       border: none;
@@ -39,6 +91,24 @@
       border-radius: 8px;
       margin-left: 150px;
       margin-top: 23px;
+      @include media-breakpoint-down(md) {
+        margin-left: 0;
+        margin-bottom: 25px;
+        padding: 14px 25px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-left: 0;
+        margin-top: 30;
+        margin-bottom: 30px;
+      }
+      @include media-breakpoint-down(xl) {
+        margin-left: 60px;
+        padding: 14px 25px;
+      }
+      @include media-breakpoint-down(xxl) {
+        margin-left: 95px;
+        padding: 14px 25px;
+      }
     }
   }
 
@@ -102,7 +172,14 @@
     }
     .right-inner-about {
       margin-top: 50px;
-      padding-left: 50px;
+      padding-right: 50px;
+      @include media-breakpoint-down(md) {
+        padding-left: 0px;
+      }
+      @include media-breakpoint-down(xl) {
+        padding-left: 0;
+        margin-top: 70px;
+      }
       .showdata {
         h4 {
           font-size: 32px;
@@ -110,6 +187,16 @@
           color: $black_color;
           padding-right: 120px;
           line-height: 40px;
+          @include media-breakpoint-down(md) {
+            padding-right: 0;
+            font-size: 30px;
+          }
+          @include media-breakpoint-down(xl) {
+            padding-right: 0;
+          }
+          @include media-breakpoint-down(xxl) {
+            padding-right: 45px;
+          }
         }
         p {
           font-size: 18px;
@@ -117,6 +204,16 @@
           color: $footer-link-color;
           line-height: 30px;
           padding-right: 24px;
+          @include media-breakpoint-down(md) {
+            font-size: 16px;
+            padding-right: 0;
+          }
+          @include media-breakpoint-down(xl) {
+            font-size: 16px;
+            padding-right: 0;
+            line-height: 25px;
+            margin-top: 15px;
+          }
         }
         button {
           padding: 15px 29px;
@@ -128,6 +225,14 @@
           font-weight: 700;
           border-radius: 8px;
           background-color: $white-color;
+          @include media-breakpoint-down(md) {
+            margin-top: 10px;
+            padding: 14px 25px;
+          }
+          @include media-breakpoint-down(xl) {
+            padding: 14px 25px;
+            margin-top: 20px;
+          }
         }
       }
     }

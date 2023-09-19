@@ -1,0 +1,124 @@
+.newsletter {
+  margin-bottom: 128px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 50px;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 60px;
+  }
+  .newsletter-wrapper {
+    background-color: $main_color;
+    padding: 50px;
+    border-radius: 8px;
+    @include media-breakpoint-down(md) {
+      padding: 25px;
+    }
+    .newsletter-heading {
+      h4 {
+        font-size: 48px;
+        font-weight: 700;
+        color: $white_color;
+        line-height: 60px;
+        @include media-breakpoint-down(md) {
+          font-size: 30px;
+          line-height: 35px;
+        }
+        @include media-breakpoint-down(lg) {
+          font-size: 40px;
+        }
+        @include media-breakpoint-down(xl) {
+          font-size: 44px;
+          line-height: 50px;
+        }
+        @include media-breakpoint-down(xxl) {
+          line-height: 55px;
+          margin-bottom: 10px;
+        }
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $white_color;
+        padding-right: 127px;
+        @include media-breakpoint-down(md) {
+          padding-right: 0;
+          font-size: 16px;
+          line-height: 25px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          margin-bottom: 20px;
+          line-height: 25px;
+          padding-right: 0;
+        }
+        @include media-breakpoint-down(xl) {
+          font-size: 16px;
+          padding-right: 0;
+          margin-top: 10px;
+        }
+        @include media-breakpoint-down(xxl) {
+          padding-right: 37px;
+        }
+      }
+    }
+    .newsletter-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      box-sizing: border-box;
+      input {
+        width: 70%;
+        padding: 18px;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        font-weight: 400;
+        @include media-breakpoint-down(md) {
+          width: 100%;
+          padding: 10px;
+          font-size: 16px;
+        }
+        @include media-breakpoint-down(xl) {
+          width: 85%;
+        }
+      }
+      button {
+        position: absolute;
+        right: 95px;
+        top: 64px;
+        padding: 12px 20px;
+        background-color: $main_color;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        svg {
+          fill: $white_color;
+          width: 25px;
+          height: 25px;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 5px 14px;
+          top: 3px;
+          right: 3px;
+        }
+        @include media-breakpoint-down(lg) {
+          top: 6px;
+        }
+        @include media-breakpoint-down(xl) {
+          top: 59px;
+          right: 37px;
+        }
+        @include media-breakpoint-down(xxl) {
+          top: 64px;
+          right: 80px;
+        }
+      }
+    }
+  }
+}

@@ -1,15 +1,9 @@
 import React from "react";
 
-const NextArrow = () => {
+const NextArrow = ({ onClick }) => {
   return (
-    <div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={24}
-        height={24}
-        viewBox="0 0 24 24"
-        fill="none"
-      >
+    <div onClick={onClick}>
+      <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
         <path
           d="M9.56995 18.07L3.49995 12L9.56995 5.93001"
           stroke="#292D32"

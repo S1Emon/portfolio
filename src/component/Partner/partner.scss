@@ -1,0 +1,48 @@
+.partner {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  .partner-heading {
+    h4 {
+      font-size: 48px;
+      font-weight: 700;
+      color: $black_color;
+      @include media-breakpoint-down(md) {
+        font-size: 38px;
+        line-height: 40px;
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: 40px;
+      }
+      @include media-breakpoint-down(xl) {
+        font-size: 44px;
+      }
+    }
+  }
+  .partner-content-box {
+    margin-top: 40px;
+    .partner-content {
+      border: 1px solid #d8d2ec;
+      text-align: center;
+      padding: 42px 29px;
+      @include media-breakpoint-down(md) {
+        &:nth-child(1) {
+          margin-bottom: 10px;
+        }
+      }
+      @include media-breakpoint-down(lg) {
+        &:nth-child(1) {
+          margin-bottom: 10px;
+        }
+      }
+      h4 {
+        font-size: 32px;
+        font-weight: 700;
+        color: $black_color;
+        margin-top: 8px;
+        @include media-breakpoint-down(xxl) {
+          font-size: 29px;
+        }
+      }
+    }
+  }
+}
