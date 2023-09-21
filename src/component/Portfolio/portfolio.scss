@@ -1,31 +1,29 @@
 .portfolio {
   margin-top: 150px;
   margin-bottom: 100px;
-  @include media-breakpoint-down(lg) {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
   .portfolio-left {
     position: relative;
     .portfolio-image {
-      @include media-breakpoint-down(lg) {
-        text-align: center;
-      }
       img {
         border-top-left-radius: 40%;
         border-top-right-radius: 40%;
         object-fit: cover;
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-between(zero, sm) {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-        @include media-breakpoint-down(lg) {
-          width: 80%;
-          height: 80%;
+        @include media-breakpoint-between(sm, md) {
+          width: 100%;
+          height: 100%;
           object-fit: cover;
         }
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-between(md, lg) {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        @include media-breakpoint-between(lg, xl) {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -44,7 +42,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         width: 100%;
         height: fit-content;
         border: none;
@@ -53,27 +51,47 @@
         margin-top: 20px;
         border-radius: 8px;
       }
-      @include media-breakpoint-down(lg) {
-        width: 230px;
-        height: 230px;
+      @include media-breakpoint-between(sm, md) {
+        width: 100%;
+        height: fit-content;
+        border: none;
+        position: static;
+        border-top-right-radius: 0;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+      @include media-breakpoint-between(md, lg) {
+        width: 100%;
+        height: fit-content;
+        border: none;
+        position: static;
+        border-top-right-radius: 0;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+      @include media-breakpoint-between(lg, xl) {
+        width: 100%;
+        height: fit-content;
+        border: none;
+        position: static;
+        border-top-right-radius: 0;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+      @include media-breakpoint-between(xl, xxl) {
+        width: 225px;
+        height: 225px;
+        border: 16px solid #fff;
         bottom: -100px;
-        right: 8px;
+        right: -15px;
       }
-      @include media-breakpoint-down(xl) {
-        width: 100%;
-        height: fit-content;
-        border: none;
-        position: static;
-        border-top-right-radius: 0;
-        margin-top: 20px;
-        border-radius: 8px;
-      }
-      @include media-breakpoint-down(xxl) {
-        width: 220px;
-        height: 220px;
-        bottom: -93px;
-        right: -14px;
-      }
+
+      // @include media-breakpoint-down(xxl) {
+      //   width: 220px;
+      //   height: 220px;
+      //   bottom: -93px;
+      //   right: -14px;
+      // }
       .experience-text {
         text-align: center;
         padding: 20px 0;
@@ -82,7 +100,7 @@
           font-size: 42px;
           font-weight: 700;
           margin-bottom: 18px;
-          @include media-breakpoint-down(md) {
+          @include media-breakpoint-between(zero, sm) {
             font-size: 36px;
           }
         }
@@ -91,7 +109,7 @@
           font-size: 42px;
           font-weight: 700;
           margin-bottom: 18px;
-          @include media-breakpoint-down(md) {
+          @include media-breakpoint-between(zero, sm) {
             font-size: 36px;
           }
         }
@@ -104,11 +122,14 @@
     }
   }
   .portfolio-right {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-between(zero, sm) {
       margin-top: 25px;
     }
-    @include media-breakpoint-down(lg) {
-      margin-top: 100px;
+    @include media-breakpoint-between(sm, md) {
+      margin-top: 20px;
+    }
+    @include media-breakpoint-between(md, lg) {
+      margin-top: 20px;
     }
     .portfolio-content {
       h3 {
@@ -116,7 +137,7 @@
         line-height: 50px;
         color: $black_color;
         font-weight: 700;
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-between(zero, sm) {
           font-size: 28px;
           line-height: 36px;
         }
@@ -130,9 +151,15 @@
         font-weight: 400;
         color: $footer_link_color;
         margin-top: 24px;
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-between(zero, sm) {
           font-size: 16px;
           line-height: 25px;
+          margin-bottom: 24px;
+        }
+        @include media-breakpoint-between(sm, md) {
+          margin-bottom: 24px;
+        }
+        @include media-breakpoint-between(md, lg) {
           margin-bottom: 24px;
         }
       }
@@ -150,7 +177,7 @@
           svg {
             margin-right: 8px;
           }
-          @include media-breakpoint-down(md) {
+          @include media-breakpoint-between(zero, sm) {
             font-size: 15px;
           }
         }
@@ -165,7 +192,13 @@
         font-weight: 700;
         border-radius: 8px;
         margin-top: 40px;
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-between(zero, sm) {
+          padding: 14px 25px;
+        }
+        @include media-breakpoint-between(sm, md) {
+          padding: 14px 25px;
+        }
+        @include media-breakpoint-between(md, lg) {
           padding: 14px 25px;
         }
       }
@@ -173,7 +206,11 @@
     .portfolio-statistics {
       margin-top: 45px;
       display: flex;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
+        justify-content: center;
+        align-items: center;
+      }
+      @include media-breakpoint-between(sm, md) {
         justify-content: center;
         align-items: center;
       }

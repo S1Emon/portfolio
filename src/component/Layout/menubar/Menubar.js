@@ -30,7 +30,7 @@ const Menubar = () => {
     window.addEventListener("scroll", handleScroll);
   }, []);
   return (
-    <Navbar expand="lg" className={showNavbar ? "nav stickynav" : "nav"}>
+    <Navbar expand="lg" className={showNavbar ? "navbar stickynav" : "navbar"}>
       <Container>
         <Link href="#">
           <Logo />

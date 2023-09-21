@@ -7,19 +7,22 @@
         font-size: 72px;
         line-height: 90px;
         font-weight: 700;
-        @include media-breakpoint-down(md) {
-          font-size: 40px;
+        @include media-breakpoint-between(zero, sm) {
+          font-size: 36px;
           line-height: 60px;
         }
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-between(sm, md) {
           font-size: 56px;
-          line-height: 80px;
         }
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-between(md, lg) {
+          font-size: 60px;
+          padding-right: 84px;
+        }
+        @include media-breakpoint-between(lg, xl) {
           font-size: 51px;
-          line-height: 72px;
+          line-height: 85px;
         }
-        @include media-breakpoint-down(xxl) {
+        @include media-breakpoint-between(xl, xxl) {
           font-size: 61px;
         }
         span {
@@ -43,14 +46,24 @@
         color: $footer-link-color;
         margin-top: 30px;
         font-weight: 400 !important;
-        @include media-breakpoint-down(lg) {
-          padding-right: 200px;
+        @include media-breakpoint-between(zero, sm) {
+          font-size: 16px;
+          line-height: 25px;
         }
-        @include media-breakpoint-down(xl) {
-          margin-top: 15px;
+        @include media-breakpoint-between(sm, md) {
+          padding-right: 55px;
         }
-        @include media-breakpoint-down(xxl) {
-          padding-right: 84px;
+        @include media-breakpoint-between(md, lg) {
+          padding-right: 154px;
+        }
+        @include media-breakpoint-between(lg, xl) {
+          font-size: 17px;
+        }
+        @include media-breakpoint-between(xl, xxl) {
+          padding-right: 5px;
+        }
+        @include media-breakpoint-up(xxl) {
+          padding-right: 94px;
         }
       }
       .hero-buttons {
@@ -68,6 +81,9 @@
           border-radius: 8px;
           margin-right: 40px;
           font-weight: 700;
+          @include media-breakpoint-between(zero, sm) {
+            padding: 14px 25px;
+          }
         }
         a {
           color: $black_color;

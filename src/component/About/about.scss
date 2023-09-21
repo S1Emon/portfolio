@@ -1,11 +1,5 @@
 .about {
   padding-bottom: 100px;
-  @include media-breakpoint-down(lg) {
-    padding-bottom: 0;
-  }
-  @include media-breakpoint-down(xl) {
-    padding-bottom: 0;
-  }
   .about-heading {
     h2 {
       font-size: 48px;
@@ -15,15 +9,12 @@
       span {
         color: $main_color;
       }
-      @include media-breakpoint-down(md) {
-        font-size: 34px;
-        line-height: 40px;
+      @include media-breakpoint-between(zero, sm) {
+        font-size: 33px;
+        line-height: 44px;
       }
-      @include media-breakpoint-down(lg) {
-        margin-bottom: 20px;
-      }
-      @include media-breakpoint-down(xl) {
-        font-size: 47px;
+      @include media-breakpoint-between(lg, xl) {
+        font-size: 44px;
       }
     }
   }
@@ -44,39 +35,40 @@
         height: 70px;
         background-color: $main_color;
       }
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         font-size: 16px;
         padding-left: 0;
         line-height: 25px;
+        margin-top: 15px;
         &::after {
           content: none;
         }
       }
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-between(sm, md) {
         padding-left: 0;
+        margin-top: 15px;
         &::after {
-          left: -20px;
-          height: 50px;
-          width: 3px;
+          content: none;
         }
       }
-      @include media-breakpoint-down(xl) {
-        padding-left: 60px;
+      @include media-breakpoint-between(md, lg) {
+        padding-left: 0;
+        margin-top: 15px;
+        &::after {
+          content: none;
+        }
+      }
+      @include media-breakpoint-between(lg, xl) {
+        padding-left: 53px;
         font-size: 16px;
-        line-height: 25px;
         &::after {
-          left: 41px;
-          height: 75px;
-          width: 3px;
+          left: 30px;
         }
       }
-      @include media-breakpoint-down(xxl) {
-        padding-left: 92px;
-        font-size: 18px;
-
+      @include media-breakpoint-between(xl, xxl) {
+        padding-left: 60px;
         &::after {
-          left: 70px;
-          height: 75px;
+          left: 30px;
           width: 2px;
         }
       }
@@ -91,22 +83,27 @@
       border-radius: 8px;
       margin-left: 150px;
       margin-top: 23px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
+        margin-left: 0;
+        padding: 14px 25px;
+        margin-bottom: 25px;
+      }
+      @include media-breakpoint-between(sm, md) {
+        padding: 14px 25px;
+        margin-bottom: 25px;
+        margin-left: 0;
+      }
+      @include media-breakpoint-between(md, lg) {
+        padding: 14px 25px;
         margin-left: 0;
         margin-bottom: 25px;
+      }
+      @include media-breakpoint-between(lg, xl) {
         padding: 14px 25px;
+        margin-left: 55px;
       }
-      @include media-breakpoint-down(lg) {
-        margin-left: 0;
-        margin-top: 30;
-        margin-bottom: 30px;
-      }
-      @include media-breakpoint-down(xl) {
-        margin-left: 60px;
-        padding: 14px 25px;
-      }
-      @include media-breakpoint-down(xxl) {
-        margin-left: 95px;
+      @include media-breakpoint-between(xl, xxl) {
+        margin-left: 63px;
         padding: 14px 25px;
       }
     }
@@ -173,8 +170,8 @@
     .right-inner-about {
       margin-top: 50px;
       padding-right: 50px;
-      @include media-breakpoint-down(md) {
-        padding-left: 0px;
+      @include media-breakpoint-between(zero, sm) {
+        padding-right: 0;
       }
       @include media-breakpoint-down(xl) {
         padding-left: 0;
@@ -187,16 +184,21 @@
           color: $black_color;
           padding-right: 120px;
           line-height: 40px;
-          @include media-breakpoint-down(md) {
-            padding-right: 0;
-            font-size: 30px;
-          }
-          @include media-breakpoint-down(xl) {
+          @include media-breakpoint-between(zero, sm) {
             padding-right: 0;
           }
-          @include media-breakpoint-down(xxl) {
+          @include media-breakpoint-between(sm, md) {
+            padding-right: 0;
+          }
+          @include media-breakpoint-between(lg, xl) {
+            padding-right: 6px;
+          }
+          @include media-breakpoint-between(xl, xxl) {
             padding-right: 45px;
           }
+          // @include media-breakpoint-down(xxl) {
+          //   padding-right: 45px;
+          // }
         }
         p {
           font-size: 18px;
@@ -213,6 +215,9 @@
             padding-right: 0;
             line-height: 25px;
             margin-top: 15px;
+          }
+          @include media-breakpoint-between(xl, xxl) {
+            padding-right: 0;
           }
         }
         button {

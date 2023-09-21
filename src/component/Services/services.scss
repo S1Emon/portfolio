@@ -1,15 +1,30 @@
 .service {
   margin-top: 120px;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-between(zero, sm) {
     margin-top: 0;
   }
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-between(sm, md) {
     margin-top: 0;
+  }
+  @include media-breakpoint-between(md, lg) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-between(lg, xl) {
+    margin-top: 40px;
+  }
+  @include media-breakpoint-between(xl, xxl) {
+    margin-top: 80px;
   }
   .service-heading {
     margin-top: 100px;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-between(zero, sm) {
       margin-top: 0;
+    }
+    @include media-breakpoint-between(sm, md) {
+      margin-top: 0;
+    }
+    @include media-breakpoint-between(md, lg) {
+      margin-top: 30px;
     }
     h4 {
       font-size: 40px;
@@ -19,28 +34,38 @@
       span {
         color: $main_color;
       }
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         font-size: 28px;
         line-height: 40px;
       }
-      @include media-breakpoint-down(xl) {
-        font-size: 34px;
+      @include media-breakpoint-between(lg, xl) {
+        font-size: 36px;
+      }
+      @include media-breakpoint-between(xl, xxl) {
+        font-size: 36px;
+      }
+      @include media-breakpoint-up(xxl) {
+        font-size: 44px;
+        line-height: 60px;
       }
     }
     p {
       font-size: 18px;
       color: $footer-link-color;
       line-height: 30px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         font-size: 16px;
         line-height: 25px;
         margin-top: 10px;
         margin-bottom: 8px;
       }
-      @include media-breakpoint-down(xl) {
-        font-size: 16px;
+      @include media-breakpoint-between(sm, md) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      @include media-breakpoint-between(lg, xl) {
+        font-size: 15px;
         line-height: 25px;
-        padding-right: 50px;
       }
     }
     button {
@@ -53,16 +78,18 @@
       font-size: 20px;
       font-weight: 700;
       margin-top: 20px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         margin-top: 15px;
         margin-bottom: 35px;
         padding: 14px 25px;
       }
-      @include media-breakpoint-down(lg) {
-        margin-bottom: 35px;
-        padding: 14px 25px;
+      @include media-breakpoint-between(sm, md) {
+        margin-bottom: 30px;
       }
-      @include media-breakpoint-down(xl) {
+      @include media-breakpoint-between(md, lg) {
+        margin-bottom: 30px;
+      }
+      @include media-breakpoint-between(lg, xl) {
         padding: 14px 25px;
       }
     }
@@ -79,23 +106,35 @@
       &:hover {
         transform: translateX(70px);
       }
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         &:hover {
           transform: scale(1.04);
         }
         transform: none;
-        padding: 10px;
+        padding: 15px;
       }
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-between(sm, md) {
         &:hover {
           transform: scale(1.04);
         }
         transform: none;
-        padding: 30px;
-        text-align: center;
+        padding: 15px;
       }
-      @include media-breakpoint-down(xl) {
-        padding: 0 30px;
+      @include media-breakpoint-between(md, lg) {
+        &:hover {
+          transform: scale(1.04);
+        }
+        transform: none;
+        padding: 15px;
+      }
+      @include media-breakpoint-between(lg, xl) {
+        padding: 5px 0 10px 24px;
+        &:hover {
+          transform: translateX(40px);
+        }
+      }
+      @include media-breakpoint-between(xl, xxl) {
+        padding: 5px 0 10px 24px;
         &:hover {
           transform: translateX(40px);
         }
@@ -113,17 +152,34 @@
         height: 100%;
         .service-content {
           padding-left: 10px;
-          @include media-breakpoint-down(md) {
+          @include media-breakpoint-between(zero, sm) {
             text-align: center;
+            padding-left: 0;
+          }
+          @include media-breakpoint-between(sm, md) {
+            text-align: center;
+            padding-left: 0;
+          }
+          @include media-breakpoint-between(md, lg) {
+            text-align: center;
+            padding-left: 0;
           }
           h4 {
             font-size: 24px;
             font-weight: 700;
             line-height: 30px;
             color: $black_color;
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-between(zero, sm) {
               font-size: 20px;
-              line-height: 25px;
+            }
+            @include media-breakpoint-between(sm, md) {
+              font-size: 20px;
+            }
+            @include media-breakpoint-between(md, lg) {
+              font-size: 20px;
+            }
+            @include media-breakpoint-between(lg, xl) {
+              font-size: 20px;
             }
           }
           p {
@@ -131,10 +187,15 @@
             font-weight: 400;
             line-height: 30px;
             color: $footer-link-color;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-between(zero, sm) {
               font-size: 16px;
+              line-height: 25px;
             }
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-between(sm, md) {
+              font-size: 16px;
+              line-height: 25px;
+            }
+            @include media-breakpoint-between(lg, xl) {
               font-size: 16px;
               line-height: 25px;
             }
@@ -151,20 +212,26 @@
       transform: translateX(70px);
       transition: all linear 0.3s;
       cursor: pointer;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         transform: scale(1.05);
         padding: 10px;
-      }
-      @include media-breakpoint-down(lg) {
-        &:hover {
-          transform: scale(1.05);
-        }
-        transform: none;
-        padding: 30px;
         text-align: center;
       }
-      @include media-breakpoint-down(xl) {
-        padding: 0 30px;
+      @include media-breakpoint-between(sm, md) {
+        transform: scale(1.05);
+        padding: 10px;
+        text-align: center;
+      }
+      @include media-breakpoint-between(md, lg) {
+        transform: scale(1.05);
+        padding: 10px;
+        text-align: center;
+      }
+      @include media-breakpoint-between(lg, xl) {
+        padding: 5px 0 10px 24px;
+      }
+      @include media-breakpoint-between(xl, xxl) {
+        padding: 5px 0 10px 24px;
         transform: translateX(40px);
       }
       .service-icon {
@@ -180,20 +247,30 @@
         height: 100%;
         .service-content {
           padding-left: 10px;
-          @include media-breakpoint-down(md) {
+          @include media-breakpoint-between(zero, sm) {
             text-align: center;
+            padding-left: 0;
           }
-          @include media-breakpoint-down(lg) {
+          @include media-breakpoint-between(sm, md) {
             text-align: center;
+            padding-left: 0;
           }
           h4 {
             font-size: 24px;
             font-weight: 700;
             line-height: 30px;
             color: $black_color;
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-between(zero, sm) {
               font-size: 20px;
-              line-height: 25px;
+            }
+            @include media-breakpoint-between(sm, md) {
+              font-size: 20px;
+            }
+            @include media-breakpoint-between(md, lg) {
+              font-size: 20px;
+            }
+            @include media-breakpoint-between(lg, xl) {
+              font-size: 20px;
             }
           }
           p {
@@ -201,10 +278,15 @@
             font-weight: 400;
             line-height: 30px;
             color: $footer-link-color;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-between(zero, sm) {
               font-size: 16px;
+              line-height: 25px;
             }
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-between(sm, md) {
+              font-size: 16px;
+              line-height: 25px;
+            }
+            @include media-breakpoint-between(lg, xl) {
               font-size: 16px;
               line-height: 25px;
             }

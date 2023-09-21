@@ -1,11 +1,11 @@
 .blog {
   margin-top: 120px;
   margin-bottom: 50px;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-between(zero, sm) {
     margin-top: 80px;
   }
-  @include media-breakpoint-down(lg) {
-    margin-top: 100px;
+  @include media-breakpoint-between(sm, md) {
+    margin-top: 60px;
   }
   .blog-heading {
     h4 {
@@ -13,12 +13,12 @@
       font-weight: 700;
       line-height: 70px;
       margin-bottom: 24px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         font-size: 38px;
         margin-bottom: 0;
       }
-      @include media-breakpoint-down(lg) {
-        font-size: 40px;
+      @include media-breakpoint-between(sm, md) {
+        font-size: 44px;
       }
     }
     p {
@@ -27,25 +27,26 @@
       color: $footer-link-color;
       line-height: 30px;
       padding: 0 300px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         font-size: 16px;
         padding: 0;
       }
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-between(sm, md) {
         padding: 0;
       }
-      @include media-breakpoint-down(xl) {
-        font-size: 16px;
-        padding: 0 150px;
+      @include media-breakpoint-between(md, lg) {
+        padding: 0;
       }
-      @include media-breakpoint-down(xxl) {
+      @include media-breakpoint-between(lg, xl) {
+        padding: 0 110px;
+      }
+      @include media-breakpoint-between(xl, xxl) {
         padding: 0 200px;
       }
     }
   }
   .blog-slider {
     margin-top: 40px;
-
     .slick-next {
       @include media-breakpoint-down(lg) {
         right: -10px;
@@ -53,9 +54,12 @@
       @include media-breakpoint-down(xl) {
         right: -5px;
       }
-      @include media-breakpoint-down(xxl) {
-        right: -13px;
+      @include media-breakpoint-between(xl, xxl) {
+        right: -14px;
       }
+      // @include media-breakpoint-down(xxl) {
+      //   right: -13px;
+      // }
     }
     .slick-prev {
       @include media-breakpoint-down(lg) {
@@ -64,9 +68,12 @@
       @include media-breakpoint-down(xl) {
         left: -11px;
       }
-      @include media-breakpoint-down(xxl) {
+      @include media-breakpoint-between(xl, xxl) {
         left: -18px;
       }
+      // @include media-breakpoint-down(xxl) {
+      //   left: -18px;
+      // }
     }
     .card-box {
       min-height: 396px;
@@ -74,9 +81,15 @@
       border: 1px solid $white-second;
       border-radius: 8px;
       box-sizing: border-box;
-      @include media-breakpoint-down(lg) {
-        min-height: 496px;
+      @include media-breakpoint-between(zero, sm) {
+        min-height: 396px;
       }
+      @include media-breakpoint-between(md, lg) {
+        padding: 12px;
+      }
+      // @include media-breakpoint-down(lg) {
+      //   min-height: 496px;
+      // }
       img {
         width: 100%;
         object-fit: cover;
@@ -98,6 +111,14 @@
         margin-top: 16px;
         padding-right: 100px;
         padding-bottom: 26px;
+        @include media-breakpoint-between(zero, sm) {
+          padding-right: 0;
+          font-size: 18px;
+        }
+        @include media-breakpoint-between(md, lg) {
+          padding-right: 0;
+          font-size: 18px;
+        }
       }
       a {
         font-size: 16px;

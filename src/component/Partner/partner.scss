@@ -6,15 +6,20 @@
       font-size: 48px;
       font-weight: 700;
       color: $black_color;
-      @include media-breakpoint-down(md) {
-        font-size: 38px;
+      @include media-breakpoint-between(zero, sm) {
+        font-size: 36px;
         line-height: 40px;
       }
-      @include media-breakpoint-down(lg) {
-        font-size: 40px;
-      }
-      @include media-breakpoint-down(xl) {
+      @include media-breakpoint-between(sm, md) {
         font-size: 44px;
+        line-height: 45px;
+      }
+      @include media-breakpoint-between(md, lg) {
+        font-size: 42px;
+        line-height: 45px;
+      }
+      @include media-breakpoint-between(lg, xl) {
+        font-size: 42px;
       }
     }
   }
@@ -24,12 +29,17 @@
       border: 1px solid #d8d2ec;
       text-align: center;
       padding: 42px 29px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-between(zero, sm) {
         &:nth-child(1) {
           margin-bottom: 10px;
         }
       }
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-between(sm, md) {
+        &:nth-child(1) {
+          margin-bottom: 10px;
+        }
+      }
+      @include media-breakpoint-between(md, lg) {
         &:nth-child(1) {
           margin-bottom: 10px;
         }
@@ -39,8 +49,13 @@
         font-weight: 700;
         color: $black_color;
         margin-top: 8px;
-        @include media-breakpoint-down(xxl) {
+        @include media-breakpoint-between(lg, xl) {
+          font-size: 22px;
+          margin-top: 16px;
+        }
+        @include media-breakpoint-between(xl, xxl) {
           font-size: 29px;
+          margin-top: 16px;
         }
       }
     }
