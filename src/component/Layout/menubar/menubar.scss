@@ -54,3 +54,54 @@ nav {
     top: 0;
   }
 }
+
+.mobile-menu {
+  .mobile-bars {
+    cursor: pointer;
+  }
+  .side-bar {
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99999;
+    .cross {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+    ul {
+      text-align: center;
+      li {
+        margin: 15px 0;
+        a {
+          color: $black_color;
+          font-size: 18px;
+          transition: all linear 0.3s;
+          position: relative;
+          &:hover {
+            color: $main_color;
+          }
+        }
+      }
+    }
+    button {
+      background-color: $main_color;
+      outline: none;
+      border: none;
+      padding: 15px 30px;
+      color: $white-color;
+      border-radius: 8px;
+      text-transform: capitalize;
+      font-size: 16px;
+      margin-top: 25px;
+    }
+  }
+}
